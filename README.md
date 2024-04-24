@@ -3,6 +3,13 @@
 
 This is a template for a jsPsych-based online categorisation task. It is made to be a lightweight, easy to amend script that you can easily use for your own experiment. The task implemented here is an **animacy** task, where participants classify images as _inanimate_ or _animate_.
 
+### How to use this?
+
+The repository is centered around the main experiment script, `index.html`. This is what browsers read to show the task to participants. To run the experiment, you will need a browser to read this file and have access to the files around it. This is mainly done in two ways:
+
+1. **Locally**: turn off the `exp_online` flag, and you can run `index.html` locally. You can simply open it with a browser like Chrome, but it might be the easiest to open the whole repository in a friendly code environment that will handle it along with all the other files (a good choice is [VSCode](https://code.visualstudio.com/)). From there, your script can be ran using your local browser.
+2. **Online**: with the `exp_online` flag on, this script will try to connect to Pavlovia. If correctly placed in a GitLab repository behind the scenes, your experiment will run and be accessible at the click of a Pavlovia link.
+
 ### Directory structure
 
 ```
@@ -13,10 +20,7 @@ This is a template for a jsPsych-based online categorisation task. It is made to
 ├── instructions
 │   └── instruction_images
 ├── readme_files
-├── masks
-├── stimuli
-├── training_masks
-└── training_stimuli
+└── stimuli
 ```
 
 ### About the different folders
@@ -25,8 +29,7 @@ This is a template for a jsPsych-based online categorisation task. It is made to
 - `demographics` contains an external `.js` file with the content of the quick demographics survey to appear at the start of the experiment.
 - `informed consent` contains an external `.js` file with the content of the informed consent participants will accept at the start of the experiment, alongside a `.css` file to determine some visual features of the consent form.
 - `instructions` contains an external `.js` file containing instructions to be displayed at different moments of the experiment, and serves to de-clutter the main script. It also contains a `.css` file to style some visual elements of the instructions, and some images in `instruction_images` to illustrate things.
-- `stimuli` contains your main task images.
-- `training_stimuli` contains your training images.
+- `stimuli` contains your images, including task images (starting with _task_) and training images (starting with _train_).
 - `readme_files` contains illustrations for this readme document.
 
 

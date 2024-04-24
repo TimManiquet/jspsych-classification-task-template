@@ -25,16 +25,6 @@ import glob, json, os, pathlib
 
 ## Define some utility functions
 
-def fetch_images(img_dir, ext=None):
-    '''This function returns a list of images with a given
-    extension from a given directory.'''
-    if ext:
-        files = glob.glob(os.path.join(img_dir, '*' + ext))
-    else:
-        files = glob.glob(os.path.join(img_dir, '*'))
-    return files
-
-
 def make_json_list(files):
     '''Takes in a list of files and extract a file-wise list of
     dictionaries usable in a json file.'''
@@ -97,10 +87,7 @@ animacy_mapping = {
 ## Start making the list
 
 # Make a list for the main task trials
-task_files = fetch_images(
-    img_dir = './stimuli', # directory where your images are located
-    ext='.jpg' # extension of your files
-)
+task_files = glob.glob('./stimuli/task*.jpg')
 
 # List the stimuli 
 task_list = [{
@@ -111,7 +98,7 @@ task_list = [{
 } for file in task_files]
 
 # Repeat the process for the training images
-train_files = fetch_images(img_dir = './training_stimuli', ext='.jpg')
+train_files = glob.glob('./stimuli/train*.jpg')
 
 # Make a list without mask
 train_list = [{
