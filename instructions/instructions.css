@@ -1,0 +1,140 @@
+/* CSS elements to draw visual elements in the instructions.
+
+This script contains css elements to draw images in a grid-like
+display, useful in the instructions.
+It also contains elements to draw a keyboard on screen, useful
+to tell participants which keys to press.
+
+Credits to this very nice css keyboard:
+https://codepen.io/Mickel07/pen/YdONYK
+*/
+
+
+/* CSS code to draw images in the instructions */
+
+.image-container {
+    display: flex;
+    justify-content: space-between; /* Adjust as needed */
+    margin-bottom: 20px; /* Add space below the images */
+}
+
+.image-container img {
+    width: 200px; /* Adjust image width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+/* CSS code to draw a keyboard */
+:root {
+    --yellow: #FFC300;
+    --white: #FFFFFF;
+    --gray: #e5e5e5;
+  }
+  
+  body {
+    background-color: #FFFFFF;
+    margin-top: 50px;
+    font-family: Arial;
+  }
+  
+  span {
+    display: block;
+    margin-top: -5px;
+  }
+  
+  .keyboard {
+    width: 755px;
+    height: 212px;
+    margin: 0px auto;
+    border: 3px solid #666666;
+    border-radius: 10px;
+    background: #cccccc;
+  }
+  
+  .row {
+    margin-top: 2px;
+    overflow: hidden;
+  }
+  
+  .letter_key {
+    width: 50px;
+    height: 50px;
+    float: left;
+    cursor: pointer;
+    background-color: var(--white);
+    color: #000000;
+    line-height: 48px;
+    text-align: center;
+    margin-left: 2px;
+    border-radius: 4px;
+  }
+  
+  /* Modify these lines below if you wish to change the appearence of the response keys */
+  .response_key {
+    width: 50px;
+    height: 50px;
+    float: left;
+    cursor: pointer;
+    background-color: var(--yellow);
+    color: #000000;
+    line-height: 48px;
+    text-align: center;
+    margin-left: 2px;
+    border-radius: 4px;
+  }
+  
+  .other_key {
+    width: 50px;
+    height: 50px;
+    float: left;
+    cursor: pointer;
+    background-color: var(--gray);
+    color: #e5e5e5;
+    line-height: 48px;
+    text-align: center;
+    margin-left: 2px;
+    border-radius: 4px;
+  }
+  
+  .key__symbols {
+    line-height: 28px;
+  }
+  
+  .key__oneandhalf {
+    width: 75px;
+  }
+  
+  .key__esc {
+    background: var(--peach);
+    width: 30px;
+  }
+  
+  .key__enter {
+    width: 87px;
+  }
+  
+  .key__caps {
+    width: 90px;
+  }
+  
+  .key__shift-left {
+    width: 60px;
+  }
+
+  .key__shift-right {
+    width: 117px;
+  }
+  
+  .key__spacebar {
+    width: 275px;
+  }
+  
+  .key__bottom-funct {
+    width: 70px;
+  }
+  
+  .feather {
+    margin-top: 10px;
+  }
+
+

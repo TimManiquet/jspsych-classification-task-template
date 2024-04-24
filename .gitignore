@@ -1,0 +1,4 @@
+# Ignore all mac-related ds_store files
+.DS_Store
+*/.DS_Store
+*/*/.DS_Store

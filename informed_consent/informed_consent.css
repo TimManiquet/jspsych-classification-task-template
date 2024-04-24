@@ -1,0 +1,29 @@
+/*
+The present script gives element styles to display the consent form.
+*/
+
+
+/* Making a nice green button to accept the consent */
+#accept_consent_button {
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Decide on some layout properties of the consent text */
+.consent {
+    font-size: 14px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+/* Decide on the font properties of your titles */
+h5 {
+    margin-bottom: 1px;
+    margin-top: 3px;
+    font-size: 16px;
+}
