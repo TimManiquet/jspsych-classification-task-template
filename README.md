@@ -64,6 +64,8 @@ Here are the parameters to set before running your script:
  - `debugging_mode` turn this on to make the experiment much shorter (useful for debugging.)
  - `debugging_length` how many trials of training and main task are played in debug mode.
 
+ - `save_data_locally` whether or not to download a copy of the created data locall at the end of the experiment.
+
 
 ### Experiment timeline
 

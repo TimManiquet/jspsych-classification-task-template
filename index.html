@@ -88,6 +88,9 @@
     let debugging_mode = false; // turn this on to make the experiment much shorter
     let debugging_length = 8; // how many trials of training and main task are played in debug mode
 
+    // LOCAL DATA SAVE
+    let save_data_locally = false; // set to true to have a copy of the data downloaded locally
+
 ///////////////////////////////////////////////////
 
 
@@ -98,13 +101,20 @@
     // initialise JsPsych
     const jsPsych = initJsPsych({
         default_iti: 0,
-        //extensions: [
-        //  { type: jsPsychExtensionMouseTracking, params: {minimum_sample_time: 0} }
-        //],
         data: {
             event: 'initialise_JsPsych',
             exp_id: "template_classification_task",
+        },
+        on_finish: function() {
+            if (save_data_locally) {
+                jsPsych.data
+                .get()
+                .localSave(
+                    'json',
+                    'data.json'
+            );
         }
+    },
     });
 
     // Start the experiment timeline
